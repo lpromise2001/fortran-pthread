@@ -33,7 +33,7 @@ module pthread
         function pthread_join( thread, value_ptr) bind(c, name='pthread_join')
             import :: c_int, c_ptr, pthread_t
             type(pthread_t), intent(in), value :: thread
-            type(c_ptr),     intent(in)        :: value_ptr
+            type(c_ptr),     intent(in), value :: value_ptr
             integer(kind=c_int)                :: pthread_join
         end function pthread_join
     end interface
